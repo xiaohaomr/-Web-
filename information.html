@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社团信息搜索结果</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/systemc.css">
+    <link rel="stylesheet" href="css/information.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="logo">学生社团管理系统</div>
+            <nav>
+                <a class="nav-pill" href="systemc.html" onclick="goBack()">返回首页</a>
+            </nav>
+            <div class="user-info">
+                <span class="username" id="currentUsername">用户</span>
+                <button class="btn" onclick="showPersonalInfo()">个人信息</button>
+                <button class="btn" onclick="logout()">退出登录</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-results-container">
+                <div class="search-header">
+                    <div class="search-query">搜索结果: <span id="searchQueryText">""</span></div>
+                    <div class="search-stats" id="searchStats">共找到 0 条结果</div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <span class="filter-label">筛选:</span>
+                        <select class="filter-select" id="resultTypeFilter" onchange="filterResults()">
+                            <option value="all">全部</option>
+                            <option value="club">社团</option>
+                            <option value="体育类">体育类社团</option>
+                            <option value="文艺类">文艺类社团</option>
+                            <option value="科技类">科技类社团</option>
+                            <option value="学术类">学术类社团</option>
+                            <option value="兴趣类">兴趣类社团</option>
+                            <option value="公益类">公益类社团</option>
+                            <option value="activity">活动</option>
+                            <option value="news">资讯</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- 社团搜索结果 -->
+                <section id="club-results" class="results-section">
+                    <h3 class="section-title">社团</h3>
+                    <div id="clubResultsContainer">
+                        <!-- 社团搜索结果将通过JavaScript动态加载 -->
+                    </div>
+                </section>
+
+                <!-- 活动搜索结果 -->
+                <section id="activity-results" class="results-section">
+                    <h3 class="section-title">活动</h3>
+                    <div id="activityResultsContainer">
+                        <!-- 活动搜索结果将通过JavaScript动态加载 -->
+                    </div>
+                </section>
+
+                <!-- 资讯搜索结果 -->
+                <section id="news-results" class="results-section">
+                    <h3 class="section-title">资讯</h3>
+                    <div id="newsResultsContainer">
+                        <!-- 资讯搜索结果将通过JavaScript动态加载 -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/information.js"></script>
+</body>
+</html>

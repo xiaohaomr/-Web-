@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动详情 - 管理者</title>
+    <!-- 引入字体图标 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="css/systemc.css">
+    <link rel="stylesheet" href="css/active2.css">
+</head>
+<body>
+    <div class="page">
+        <!-- 页面头部 -->
+        <header>
+            <div class="logo">校园社团活动管理系统</div>
+            <nav>
+                <a href="systemb.html" class="nav-pill">返回管理后台</a>
+            </nav>
+        </header>
+        
+        <!-- 页面主体 -->
+        <main>
+            <button class="back-btn" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> 返回活动列表
+            </button>
+            
+            <div class="activity-details">
+                <div class="activity-header">
+                    <h1 class="activity-title" id="activity-name">活动详情</h1>
+                    <span class="activity-status" id="activity-status">-</span>
+                </div>
+                
+                <div class="activity-meta">
+                    <div class="meta-item">
+                        <i class="fa fa-users meta-label"></i>
+                        <span class="meta-value">
+                            社团: <span id="activity-club">-</span>
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa fa-calendar meta-label"></i>
+                        <span class="meta-value">
+                            时间: <span id="activity-time">-</span>
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa fa-map-marker meta-label"></i>
+                        <span class="meta-value">
+                            地点: <span id="activity-location">-</span>
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa fa-user-circle meta-label"></i>
+                        <span class="meta-value">
+                            负责人: <span id="activity-organizer">-</span>
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fa fa-clock-o meta-label"></i>
+                        <span class="meta-value">
+                            报名截止: <span id="activity-signup-end">-</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="activity-content">
+                    <h3 class="section-title">活动内容</h3>
+                    <div id="activity-content">-</div>
+                </div>
+                
+                <div class="activity-info">
+                    <h3 class="section-title">活动信息</h3>
+                    <div class="meta-item">
+                        <span class="meta-label">活动形式:</span>
+                        <span class="meta-value" id="activity-form">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">最大人数:</span>
+                        <span class="meta-value" id="activity-max-people">-</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">报名人数:</span>
+                        <span class="meta-value" id="activity-signup-count">0</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">已签到人数:</span>
+                        <span class="meta-value" id="activity-checkin-count">0</span>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button class="btn primary" onclick="editActivity()">编辑活动</button>
+                    <button class="btn" onclick="openCheckinModal()">签到管理</button>
+                    <button class="btn" onclick="openSummaryModal()">活动总结</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/active2.js"></script>
+</body>
+</html>

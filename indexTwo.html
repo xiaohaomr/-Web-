@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="nav-wrapper" aria-label="隐藏导航栏，悬停显示">
+        <nav class="nav-bar">
+            <div class="nav-links">
+                <a class="nav-link nav-brand" href="#">学生社团管理系统</a>
+                <a class="nav-link" href="#">社团中心</a>
+                <a class="nav-link" href="#">社团创新</a>
+                <a class="nav-link" href="#">加入社团</a>
+                <a class="nav-link" href="#">联系社团</a>
+            </div>
+            <a class="nav-link nav-more" href="#" >更多</a>
+        </nav>
+    </div>
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="image/indexBackground.mp4" type="video/mp4">
+        
+    </video>
+    <div class="content">
+        <div class="login-card">
+            <h2>登录</h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input id="username" name="username" type="text" placeholder="请输入管理者账号" required>
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <div class="password-container">
+                        <input id="password" name="password" type="password" placeholder="请输入密码" required>
+                        <button type="button" id="togglePassword" class="toggle-password" aria-label="显示密码">
+                            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M32 4C16.5 4 4 14.3 4 32s12.5 28 28 28 28-10.3 28-28S47.5 4 32 4zm0 50C17.6 54 6 40.4 6 32S17.6 10 32 10 58 23.6 58 32 46.4 54 32 54z"/>
+                                <path d="M32 18c7.7 0 14 6.3 14 14s-6.3 14-14 14-14-6.3-14-14 6.3-14 14-14zm0 24c5.5 0 10-4.5 10-10s-4.5-10-10-10-10 4.5-10 10 4.5 10 10 10z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <div class="form-group">
+                    <div class="error-message" id="generalError"></div>
+                </div>
+                <button class="login-btn" type="submit">登录</button>
+                <div class="action-links">
+                    <a href="#">忘记密码？</a>
+                    <a href="Register.html">注册</a>
+                </div>
+                <div class="admin-login">
+                    <button class="admin-btn" id="adminLoginBtn" type="button">学生登录</button>
+                </div>
+            </form>
+            <div class="social-login">
+                其它方式登录
+                <div class="social-icons">
+                    <button class="social-btn wechat" aria-label="微信登录" type="button">
+                        <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M28 12c-11 0-20 7.3-20 16.4 0 5.2 3 9.9 7.8 12.9l-1.8 6.4 7-4c2.2.6 4.1.9 6.4.9 11 0 20-7.3 20-16.4S39 12 28 12z" opacity=".9"/>
+                            <circle cx="22.5" cy="25.5" r="2.5"/>
+                            <circle cx="33.5" cy="25.5" r="2.5"/>
+                            <path d="M38 30c9 0 16 6 16 13.5 0 4.3-2.5 8.1-6.6 10.6l1.3 4.9-5.4-3c-1.6.4-3.1.7-4.8.7-8.9 0-16-6-16-13.5S29.1 30 38 30z"/>
+                            <circle cx="33.5" cy="41" r="2.4"/>
+                            <circle cx="43.5" cy="41" r="2.4"/>
+                        </svg>
+                    </button>
+                    <button class="social-btn qq" aria-label="QQ登录" type="button">
+                        <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M32 8c-7.7 0-14 7-14 15.6 0 2.7.7 5.3 2 7.6-2.2 1.8-4.1 4.7-5.3 8.4-.7 2.2.1 4.3 1.9 4.2 1.1 0 2.6-1.6 3.5-3.6 1.1 3.2 3 6.3 5.7 8.3-2.5.6-4.2 1.6-4.2 2.7 0 1.8 4.7 3.3 10.4 3.3 5.8 0 10.4-1.5 10.4-3.3 0-1.1-1.7-2.1-4.2-2.7 2.7-2 4.6-5.1 5.7-8.3.9 2 2.4 3.6 3.5 3.6 1.8.1 2.6-2 1.9-4.2-1.2-3.7-3.1-6.6-5.3-8.4 1.3-2.3 2-4.9 2-7.6C46 15 39.7 8 32 8z" />
+                        </svg>
+                    </button>
+                    <button class="social-btn phone" aria-label="手机验证码登录" type="button">
+                        <svg class="icon" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M45 6H19c-2.2 0-4 1.8-4 4v44c0 2.2 1.8 4 4 4h26c2.2 0 4-1.8 4-4V10c0-2.2-1.8-4-4-4zm-1 4v2H20V10h24zM20 48h24v6H20v-6zm0-4V18h24v26H20z"/>
+                            <circle cx="32" cy="51" r="2.4"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="club-section" id="club-info">
+        <div class="club-header">
+            <h2>社团亮点</h2>
+            <p>了解我们的社团文化、招新计划与会员风采。向下滚动可看到各板块，内容将从左侧轻盈滑入，文字围绕图片紧凑呈现。</p>
+        </div>
+        <div class="club-cards">
+            <div class="club-card">
+                <img src="image/indexClub1.jpg" alt="社团介绍">
+                <div class="club-text">
+                    <h3>社团介绍</h3>
+                    <p>学生社团管理系统汇聚校内多元社团，提供活动发布、报名、签到与数据统计一站式支持，助力社团高效协作。</p>
+                    <p>通过智能分组与消息推送，成员能够及时获取最新动态，保持高效沟通。</p>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="image/indexClub2.jpg" alt="社团招新">
+                <div class="club-text">
+                    <h3>社团招新</h3>
+                    <p>一键发布招新计划，支持线上报名与材料收集，让招新流程更顺畅。</p>
+                    <p>通过数据看板快速了解报名人数与专业分布，辅助精准招新与资源安排。</p>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="image/indexClub3.jpg" alt="社团会员">
+                <div class="club-text">
+                    <h3>社团会员</h3>
+                    <p>会员档案统一管理，支持成员分级、积分与荣誉墙展示，增强社团归属感。</p>
+                    <p>活动记录、签到历史、贡献度等数据可视化，帮助核心成员制定激励方案。</p>
+                </div>
+            </div>
+            <div class="club-card">
+                <img src="image/indexClub4.jpg" alt="社团活动">
+                <div class="club-text">
+                    <h3>精彩活动</h3>
+                    <p>多样化的校园活动案例与复盘沉淀，为新活动提供灵感与参考。</p>
+                    <p>活动图库支持图片留存与分享，展示社团风采，吸引更多伙伴加入。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>学生社团管理系统致力于提供高效、便捷的社团服务平台，连接成员、活动与管理。</p>
+                <p>我们专注于社团信息化，帮助社团更好地组织、沟通与创新。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速导航</h4>
+                <div class="footer-links">
+                    <a href="#">社团中心</a>
+                    <a href="#">社团创新</a>
+                    <a href="#">加入社团</a>
+                    <a href="#">联系社团</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>版权声明</h4>
+                <p>© 2025 社团平台. 保留所有权利。</p>
+                <p>使用前请阅读相关条款与隐私政策。</p>
+            </div>
+            <div class="footer-section">
+                <h4>社交媒体</h4>
+                <div class="footer-icons">
+                    <a class="footer-icon" href="#" aria-label="微信">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M28 12c-11 0-20 7.3-20 16.4 0 5.2 3 9.9 7.8 12.9l-1.8 6.4 7-4c2.2.6 4.1.9 6.4.9 11 0 20-7.3 20-16.4S39 12 28 12z" opacity=".9"/>
+                            <circle cx="22.5" cy="25.5" r="2.5"/>
+                            <circle cx="33.5" cy="25.5" r="2.5"/>
+                            <path d="M38 30c9 0 16 6 16 13.5 0 4.3-2.5 8.1-6.6 10.6l1.3 4.9-5.4-3c-1.6.4-3.1.7-4.8.7-8.9 0-16-6-16-13.5S29.1 30 38 30z"/>
+                            <circle cx="33.5" cy="41" r="2.4"/>
+                            <circle cx="43.5" cy="41" r="2.4"/>
+                        </svg>
+                    </a>
+                    <a class="footer-icon" href="#" aria-label="QQ">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M32 8c-7.7 0-14 7-14 15.6 0 2.7.7 5.3 2 7.6-2.2 1.8-4.1 4.7-5.3 8.4-.7 2.2.1 4.3 1.9 4.2 1.1 0 2.6-1.6 3.5-3.6 1.1 3.2 3 6.3 5.7 8.3-2.5.6-4.2 1.6-4.2 2.7 0 1.8 4.7 3.3 10.4 3.3 5.8 0 10.4-1.5 10.4-3.3 0-1.1-1.7-2.1-4.2-2.7 2.7-2 4.6-5.1 5.7-8.3.9 2 2.4 3.6 3.5 3.6 1.8.1 2.6-2 1.9-4.2-1.2-3.7-3.1-6.6-5.3-8.4 1.3-2.3 2-4.9 2-7.6C46 15 39.7 8 32 8z" />
+                        </svg>
+                    </a>
+                    <a class="footer-icon" href="#" aria-label="邮件">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M12 14h40c2.2 0 4 1.8 4 4v28c0 2.2-1.8 4-4 4H12c-2.2 0-4-1.8-4-4V18c0-2.2 1.8-4 4-4zm0 6.3V46h40V20.3L32 32 12 20.3zm2.4-4.3L32 27.2l17.6-11.2H14.4z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section contact">
+                <h4>联系信息</h4>
+                <p>电话：010-12345678</p>
+                <p>邮箱：contact@club.example.com</p>
+                <p>地址：北京市示例路 123 号</p>
+            </div>
+        </div>
+    </footer>
+    <div class="verify-overlay" id="verifyOverlay" role="dialog" aria-modal="true" aria-label="滑动验证">
+        <div class="verify-modal">
+            <div class="verify-header">
+                <span>安全验证</span>
+                <button class="verify-close" type="button" aria-label="关闭验证">×</button>
+            </div>
+            <p class="verify-tip">按住滑块拖动到最右侧完成验证</p>
+            <div class="verify-slider" id="verifySlider">
+                <div class="slider-fill" id="sliderFill"></div>
+                <div class="slider-handle" id="sliderHandle" aria-label="滑动验证" role="button" tabindex="0">➜</div>
+                <div class="slider-text" id="sliderText">按住滑块拖动</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/indexTwo.js"></script>
+</body>
+</html>
